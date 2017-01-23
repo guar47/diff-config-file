@@ -1,0 +1,38 @@
+{
+  "name": "diff-config-file",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "diff-config-file-bin": "./bin/diff-config-file-bin.js"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "eslint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Dmitrii Pashutskii",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "flow-bin": "*",
+    "flow-typed": "*",
+    "babel-plugin-syntax-flow": "*",
+    "babel-plugin-transform-flow-strip-types": "*",
+    "babel-eslint": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-import": "*"
+  }
+}
