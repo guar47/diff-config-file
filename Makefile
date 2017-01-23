@@ -2,7 +2,7 @@ install:
 	npm install
 
 run:
-	npm run babel-node -- ./bin/diff-config-file-bin.js
+	npm run babel-node -- ./bin/gendiff.js
 
 publish:
 	npm publish
