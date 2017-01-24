@@ -1,7 +1,7 @@
 {
   "name": "diff-config-file",
   "version": "0.1.0",
-  "description": "",
+  "description": "Diff Config File",
   "main": "src/diff.js",
   "bin": {
     "gendiff": "./src/bin/gendiff.js"
@@ -10,15 +10,20 @@
     "babel-node": "babel-node",
     "flow": "flow",
     "flow-typed": "flow-typed",
-    "eslint": "eslint"
+    "eslint": "eslint",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/guar47/project-lvl2-s13.git"
   },
   "author": "Dmitrii Pashutskii",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/guar47/project-lvl2-s13#readme",
+  "bugs": {
+    "url": "https://github.com/guar47/project-lvl2-s13/issues"
+  },
   "dependencies": {
     "commander": "*"
   },
