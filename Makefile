@@ -5,11 +5,16 @@ run:
 	npm run babel-node -- ./src/bin/gendiff.js $(1) $(2)
 
 build:
-		rm -rf dist
-		npm run build
+	rm -rf dist
+	npm run build
 
 publish:
 	npm publish
 
+test:
+	npm test
+
 lint:
-	npm run eslint **/*.js
+	npm run eslint -- src test
+
+.PHONY: test
