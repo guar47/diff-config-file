@@ -14,7 +14,10 @@ publish:
 test:
 	npm test
 
+test-watch:
+	npm run testwatch
+
 lint:
-	npm run eslint -- src test
+	npm run eslint -- src __tests__
 
 .PHONY: test
