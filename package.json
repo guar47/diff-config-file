@@ -27,7 +27,8 @@
     "url": "https://github.com/guar47/project-lvl2-s13/issues"
   },
   "dependencies": {
-    "commander": "*"
+    "commander": "*",
+    "yamljs": "*"
   },
   "devDependencies": {
     "babel-cli": "*",

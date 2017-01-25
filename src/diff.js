@@ -1,11 +1,10 @@
 // @flow
-/* eslint-disable no-console */
 
-import fs from 'fs';
+import parseToObject from './parseFiles';
 
 const gendiff = (firstFile, secondFile) => {
-  const parseFirst = JSON.parse(fs.readFileSync(firstFile, 'utf8'));
-  const parseSecond = JSON.parse(fs.readFileSync(secondFile, 'utf8'));
+  const parseFirst = parseToObject(firstFile);
+  const parseSecond = parseToObject(secondFile);
   const keysFirst = Object.keys(parseFirst);
   const keysSecond = Object.keys(parseSecond);
   const resultReduce = keysFirst.reduce((resultString, key, index) => {
