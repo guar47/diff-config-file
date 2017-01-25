@@ -1,7 +1,7 @@
 // @flow
 /* eslint-env jest */
 
-import gendiff from '../src/diff';
+import gendiff from '../src/index';
 
 test('check diff two JSON files', () => {
   const firstConfig = '__tests__/__fixtures__/firstFile.json';

@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 
 import program from 'commander';
-import gendiff from '../diff';
+import gendiff from '../index';
 
 program
   .version('0.2.1')

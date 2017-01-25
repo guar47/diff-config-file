@@ -2,7 +2,7 @@
   "name": "diff-config-file",
   "version": "0.3.0",
   "description": "Diff Config File",
-  "main": "src/diff.js",
+  "main": "dist/index.js",
   "bin": {
     "gendiff": "./dist/bin/gendiff.js"
   },
