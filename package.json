@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "commander": "*",
-    "yamljs": "*"
+    "yamljs": "*",
+    "ini": "*"
   },
   "devDependencies": {
     "babel-cli": "*",

@@ -5,7 +5,7 @@ import program from 'commander';
 import gendiff from '../diff';
 
 program
-  .version('0.1.3')
+  .version('0.2.1')
   .description('Compares two configuration files and shows a difference.')
   .arguments('<firstConfig> <secondConfig>')
   .action((firstConfig, secondConfig) =>
