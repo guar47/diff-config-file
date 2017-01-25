@@ -2,9 +2,9 @@
   "name": "diff-config-file",
   "version": "0.3.3",
   "description": "Diff Config File",
-  "main": ".dist/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "gendiff": "./dist/bin/gendiff.js"
+    "gendiff": "dist/bin/gendiff.js"
   },
   "scripts": {
     "babel-node": "babel-node",
