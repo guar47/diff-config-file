@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "commander": "*",
-    "ini": "*",
+    "ini-config-parser": "*",
     "lodash": "*",
     "yamljs": "*"
   },

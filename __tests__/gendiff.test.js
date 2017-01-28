@@ -7,7 +7,6 @@ test('check diff two JSON files (recursive)', () => {
   const firstConfig = '__tests__/__fixtures__/json/firstFile(recursive).json';
   const secondConfig = '__tests__/__fixtures__/json/secondFile(recursive).json';
   const result = (fs.readFileSync('__tests__/__fixtures__/result(recursive).txt', 'utf8'));
-
   expect(diffFiles(firstConfig, secondConfig)).toBe(result);
 });
 test('check diff two JSON files', () => {
@@ -28,6 +27,12 @@ test('check diff two JSON files (second bigger)', () => {
   const result = (fs.readFileSync('__tests__/__fixtures__/result(secondBigger).txt', 'utf8'));
   expect(diffFiles(firstConfig, secondConfig)).toBe(result);
 });
+test('check diff two YAML files (recursive)', () => {
+  const firstConfig = '__tests__/__fixtures__/yaml/firstFile(recursive).yml';
+  const secondConfig = '__tests__/__fixtures__/yaml/secondFile(recursive).yaml';
+  const result = (fs.readFileSync('__tests__/__fixtures__/result(recursive).txt', 'utf8'));
+  expect(diffFiles(firstConfig, secondConfig)).toBe(result);
+});
 test('check diff two YAML files', () => {
   const firstConfig = '__tests__/__fixtures__/yaml/firstFile.yml';
   const secondConfig = '__tests__/__fixtures__/yaml/secondFile.yaml';
@@ -44,6 +49,12 @@ test('check diff two YAML files (second bigger)', () => {
   const firstConfig = '__tests__/__fixtures__/yaml/firstFile.yml';
   const secondConfig = '__tests__/__fixtures__/yaml/secondFile(bigger).yaml';
   const result = (fs.readFileSync('__tests__/__fixtures__/result(secondBigger).txt', 'utf8'));
+  expect(diffFiles(firstConfig, secondConfig)).toBe(result);
+});
+test('check diff two ini files (recursive)', () => {
+  const firstConfig = '__tests__/__fixtures__/ini/firstFile(recursive).ini';
+  const secondConfig = '__tests__/__fixtures__/ini/secondFile(recursive).ini';
+  const result = (fs.readFileSync('__tests__/__fixtures__/result(recursive).txt', 'utf8'));
   expect(diffFiles(firstConfig, secondConfig)).toBe(result);
 });
 test('check diff two ini files', () => {
