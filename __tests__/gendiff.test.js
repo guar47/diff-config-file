@@ -1,5 +1,4 @@
-// @flow
-/* eslint-env jest */
+/* eslint-env node, jest */
 
 import fs from 'fs';
 import diffFiles from '../src/';

@@ -28,8 +28,9 @@
   },
   "dependencies": {
     "commander": "*",
-    "yamljs": "*",
-    "ini": "*"
+    "ini": "*",
+    "lodash": "*",
+    "yamljs": "*"
   },
   "devDependencies": {
     "babel-cli": "*",
