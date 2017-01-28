@@ -22,7 +22,7 @@ const getDiff = (firstData, secondData) => {
   return _.flatten(resultMap);
 };
 
-const diffFiles = (firstFile, secondFile, type) => {
+const diffFiles = (firstFile, secondFile, type = 'json') => {
   const sourceDataFirst = selectParser(getExtFile(firstFile))(fs.readFileSync(firstFile, 'utf8'));
   const sourceDataSecond = selectParser(getExtFile(secondFile))(fs.readFileSync(secondFile, 'utf8'));
   return format(type)(getDiff(sourceDataFirst, sourceDataSecond));

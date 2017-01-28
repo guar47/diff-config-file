@@ -31,4 +31,9 @@ const toPlainText = (diff, parent) => {
 
 const types = { json: toJsonString, plain: toPlainText };
 
-export default type => types[type];
+export default (type) => {
+  const alarm = types[type];
+  if (!alarm) {
+    throw new Error(`Output format ${type} is not supported`);
+  } return types[type];
+};
