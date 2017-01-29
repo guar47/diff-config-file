@@ -1,10 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
-import selectParser from './parsers';
-import format from './formatters';
+import selectParser from './parsers/';
+import format from './formatters/';
 
-const getExtFile = file => path.extname(file).replace('.', '');
+const getExtFile = (file) => {
+  if (path.extname(file) === '.yml') {
+    return 'yaml';
+  } return path.extname(file).replace('.', '');
+};
 
 const getDiff = (firstData, secondData) => {
   const keys = _.union(_.keys(firstData), _.keys(secondData));
@@ -23,9 +27,9 @@ const getDiff = (firstData, secondData) => {
 };
 
 const diffFiles = (firstFile, secondFile, type = 'sjson') => {
-  const sourceDataFirst = selectParser(getExtFile(firstFile))(fs.readFileSync(firstFile, 'utf8'));
-  const sourceDataSecond = selectParser(getExtFile(secondFile))(fs.readFileSync(secondFile, 'utf8'));
-  return format(type)(getDiff(sourceDataFirst, sourceDataSecond));
+  const sourceDataFirst = selectParser(getExtFile(firstFile), fs.readFileSync(firstFile, 'utf8'));
+  const sourceDataSecond = selectParser(getExtFile(secondFile), fs.readFileSync(secondFile, 'utf8'));
+  return format(type, getDiff(sourceDataFirst, sourceDataSecond));
 };
 
 export default diffFiles;
