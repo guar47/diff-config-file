@@ -1,6 +1,6 @@
 {
   "name": "diff-config-file",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Diff Config File",
   "main": "dist/index.js",
   "bin": {
@@ -54,6 +54,8 @@
     "testEnvironment": "node",
     "collectCoverage": "true",
     "coverageDirectory": "tmp",
-    "coverageReporters": ["lcov"]
+    "coverageReporters": [
+      "lcov"
+    ]
   }
 }
