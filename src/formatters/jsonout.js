@@ -11,4 +11,4 @@ const serialize = (diff) => {
   return getJson;
 };
 
-export default Json => JSON.parse(JSON.stringify(serialize(Json))) ;
+export default Json => JSON.stringify(serialize(Json));
