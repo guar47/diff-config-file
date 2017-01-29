@@ -1,6 +1,6 @@
 {
   "name": "diff-config-file",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Diff Config File",
   "main": "dist/index.js",
   "bin": {
