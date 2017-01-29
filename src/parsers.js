@@ -1,11 +1,12 @@
-import yaml from 'yamljs';
-import ini from 'ini-config-parser';
+import jsonparser from './parsers/jsonparser';
+import yamlparser from './parsers/yamlparser';
+import iniparser from './parsers/iniparser';
 
 const formats = {
-  json: data => JSON.parse(data),
-  yaml: data => yaml.parse(data),
-  yml: data => yaml.parse(data),
-  ini: data => ini.parse(data),
+  json: jsonparser,
+  yaml: yamlparser,
+  yml: yamlparser,
+  ini: iniparser,
 };
 
 export default format => formats[format];
