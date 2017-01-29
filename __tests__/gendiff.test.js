@@ -93,3 +93,9 @@ test('check diff two ini files (first bigger) to plain output', () => {
   const result = 'Property timeout was updated. From 50 to 20\nProperty proxy was removed\nProperty batch was removed\nProperty verbose was added with value: true\n';
   expect(diffFiles(firstConfig, secondConfig, 'plain')).toBe(result);
 });
+test('check diff two JSON files (recursive)', () => {
+  const firstConfig = '__tests__/__fixtures__/json/firstFile(recursive).json';
+  const secondConfig = '__tests__/__fixtures__/json/secondFile(recursive).json';
+  const result = (fs.readFileSync('__tests__/__fixtures__/result(recursive).json', 'utf8'));
+  expect(diffFiles(firstConfig, secondConfig, 'json')).toBe(result);
+});
