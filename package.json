@@ -49,5 +49,11 @@
     "flow-bin": "*",
     "flow-typed": "*",
     "jest": "*"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": "true",
+    "coverageDirectory": "tmp",
+    "coverageReporters": ["lcov"]
   }
 }

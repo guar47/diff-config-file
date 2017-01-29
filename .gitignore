@@ -2,3 +2,4 @@
 *.log
 .DC_Store
 dist
+tmp
