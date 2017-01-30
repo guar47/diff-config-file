@@ -1,10 +1,10 @@
 import _ from 'lodash';
 
-const toPlainText = (diff, parent) => {
+const getPlainText = (diff, parent) => {
   const path = _.isUndefined(parent) ? '' : `${parent}.`;
   return diff.reduce((result, element, index) => {
     if (element.action === 'equal' && _.isObject(element.value)) {
-      return `${result}${toPlainText(element.value, element.name)}\n`;
+      return `${result}${getPlainText(element.value, element.name)}\n`;
     } else if (element.action === 'added' && _.isObject(element.value)) {
       return `${result}Property ${path}${element.name} was added with complex value\n`;
     } else if (element.action === 'removed') {
@@ -18,4 +18,4 @@ const toPlainText = (diff, parent) => {
   }, '');
 };
 
-export default toPlainText;
+export default getPlainText;
