@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const getPlainText = (diff, parent) => {
-  const path = _.isUndefined(parent) ? '' : `${parent}.`;
+  const path = !parent ? '' : `${parent}.`;
   return diff.reduce((result, element, index) => {
     if (element.action === 'equal' && _.isObject(element.value)) {
       return `${result}${getPlainText(element.value, element.name)}\n`;

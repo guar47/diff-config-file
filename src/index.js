@@ -17,9 +17,9 @@ const getDiff = (firstData, secondData) => {
       return { name: key, value: firstData[key], action: 'equal' };
     } else if (_.isObject(firstData[key]) && _.isObject(secondData[key])) {
       return { name: key, value: getDiff(firstData[key], secondData[key]), action: 'equal' };
-    } else if (_.isUndefined(firstData[key])) {
+    } else if (!firstData[key]) {
       return { name: key, value: secondData[key], action: 'added' };
-    } else if (_.isUndefined(secondData[key])) {
+    } else if (!secondData[key]) {
       return { name: key, value: firstData[key], action: 'removed' };
     } return [{ name: key, value: firstData[key], action: 'changedFrom' }, { name: key, value: secondData[key], action: 'changedTo' }];
   });
