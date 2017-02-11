@@ -1,61 +1,61 @@
 {
-    "name": "diff-config-file",
-    "version": "0.4.5",
-    "description": "Diff Config File",
-    "main": "dist/index.js",
-    "bin": {
-        "gendiff": "dist/bin/gendiff.js"
-    },
-    "scripts": {
-        "babel-node": "babel-node",
-        "flow": "flow",
-        "flow-typed": "flow-typed",
-        "eslint": "eslint",
-        "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-        "prepublish": "npm run build",
-        "test": "jest",
-        "testwatch": "jest --watch"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/guar47/diffConfigFile.git"
-    },
-    "author": "Dmitrii Pashutskii",
-    "license": "ISC",
-    "homepage": "https://github.com/guar47/diffConfigFile#readme",
-    "bugs": {
-        "url": "https://github.com/guar47/diffConfigFile/issues"
-    },
-    "dependencies": {
-        "commander": "*",
-        "ini-config-parser": "*",
-        "lodash": "*",
-        "yamljs": "*"
-    },
-    "devDependencies": {
-        "babel-cli": "*",
-        "babel-core": "*",
-        "babel-eslint": "*",
-        "babel-plugin-syntax-flow": "*",
-        "babel-plugin-transform-flow-strip-types": "*",
-        "babel-preset-env": "*",
-        "babel-preset-stage-0": "*",
-        "eslint": "*",
-        "eslint-config-airbnb": "*",
-        "eslint-plugin-flowtype": "*",
-        "eslint-plugin-import": "*",
-        "eslint-plugin-jsx-a11y": "*",
-        "eslint-plugin-react": "*",
-        "flow-bin": "*",
-        "flow-typed": "*",
-        "jest": "*"
-    },
-    "jest": {
-        "testEnvironment": "node",
-        "collectCoverage": "true",
-        "coverageDirectory": "tmp",
-        "coverageReporters": [
-            "lcov"
-        ]
-    }
+  "name": "diff-config-file",
+  "version": "0.4.6",
+  "description": "Diff Config File",
+  "main": "dist/index.js",
+  "bin": {
+    "gendiff": "dist/bin/gendiff.js"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "eslint": "eslint",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build",
+    "test": "jest",
+    "testwatch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guar47/diffConfigFile.git"
+  },
+  "author": "Dmitrii Pashutskii",
+  "license": "ISC",
+  "homepage": "https://github.com/guar47/diffConfigFile#readme",
+  "bugs": {
+    "url": "https://github.com/guar47/diffConfigFile/issues"
+  },
+  "dependencies": {
+    "commander": "*",
+    "ini-config-parser": "*",
+    "lodash": "*",
+    "yamljs": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-plugin-syntax-flow": "*",
+    "babel-plugin-transform-flow-strip-types": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-react": "*",
+    "flow-bin": "*",
+    "flow-typed": "*",
+    "jest": "*"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": "true",
+    "coverageDirectory": "tmp",
+    "coverageReporters": [
+      "lcov"
+    ]
+  }
 }
