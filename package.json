@@ -52,7 +52,7 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "collectCoverage": "true",
+    "collectCoverage": true,
     "coverageDirectory": "tmp",
     "coverageReporters": [
       "lcov"
