@@ -16,5 +16,5 @@ Compares two configuration files and shows the difference
 * Install: `Make install`
 * ESLint checker: `Make lint`
 * Run: `Make run 1='firstConfig' 2='secondConfig'`
-* Test: `Make test (test files in __tests__/__fixures__/)`
+* Test: `Make test (test files in __tests__/__fixtures__/)`
 * Build babel: `Make build`
